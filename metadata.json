@@ -1,0 +1,6 @@
+{
+  "name": "TabFlow — Меньше свайпов, больше звука",
+  "description": "Интерактивный сонгбук с аккордами, табами, распознаванием игры через микрофон для автопрокрутки, тюнером и метрономом.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

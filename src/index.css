@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --font-d: 'Comfortaa', cursive, sans-serif;
+  --font-b: 'Nunito', system-ui, -apple-system, sans-serif;
+  --font-m: 'JetBrains Mono', monospace;
+  
+  --stage: #261816;
+  --bg: #f5d5b8;
+  --surface: #fbe7d4;
+  --fg: #1d1210;
+  --muted: #6e4c42;
+  --red: #7a2626;
+  --red2: #993333;
+  --onred: #fff0e4;
+  --chord: #8e2b2b;
+  --line: rgba(60, 25, 20, 0.18);
+  --ok: #277947;
+}
+
+.dark {
+  --stage: #0c0807;
+  --bg: #181110;
+  --surface: #271a17;
+  --fg: #f6e4d4;
+  --muted: #bda091;
+  --chord: #f29381;
+  --line: rgba(255, 225, 205, 0.15);
+  --ok: #5fc984;
+  --red: #6d2222;
+}
+
+body {
+  font-family: var(--font-b);
+  background-color: var(--stage);
+  color: var(--fg);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-d);
+}
+
+.font-body {
+  font-family: var(--font-b);
+}
+
+.font-mono-code {
+  font-family: var(--font-m);
+}
+
+/* Custom scrollbar hiding */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Range input custom styling */
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #7a2626 var(--p, 50%), rgba(60, 25, 20, 0.18) var(--p, 50%));
+}
+.dark input[type=range]::-webkit-slider-runnable-track {
+  background: linear-gradient(90deg, #993333 var(--p, 50%), rgba(255, 225, 205, 0.18) var(--p, 50%));
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff0e4;
+  border: 3.5px solid #7a2626;
+  margin-top: -7px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
